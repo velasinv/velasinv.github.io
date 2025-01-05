@@ -1,6 +1,14 @@
 ;(function () {
 	
 	'use strict';
+	var params = {};
+	location.search.slice(1).split("&").forEach(function(pair) {
+		pair = pair.split("=");
+		params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);});
+	console.log("se entro a la invitacion",params.number)
+		var number =(params.number == undefined )?0:params.number
+		var pases = (number == 1) ? " pase" : " pases";
+	document.getElementById("numInv").innerHTML = "Esta invitación es valida por "+ number+ pases;
 
 	var mobileMenuOutsideClick = function() {
 
@@ -213,6 +221,28 @@
 		$(window).stellar();
 	};
 
+
+	document.getElementById("confirmar").addEventListener("click", confirmar);
+	function confirmar(){
+		var name = document.getElementById("name").value
+		var number = document.getElementById("numInv").innerHTML;
+		number = number.substring(30,32);
+		// number = number.slice(-6);
+		console.log("confirmando",name,number);
+		var message= "Hola,";
+		var radioValue = $("input[name='confirm']:checked").val();
+            if(radioValue == "confirm"){
+				message+="%20quiero%20confirmar%20mi%20asistencia%20para%20la%20boda%20de%20Dania%20y%20Eduardo%20para%20"+number+" personas. Mi nombre es "+name;
+            }else{
+				message+="%20lamentablemente%20no%20podré%20asistir%20a%20la%20boda%20de%20Dania%20y%20Eduardo. Mi nombre es "+name;
+			}
+	
+		window.open("https://wa.me/+526622337516/?text="+ message,"_blank");
+		
+	
+	}
+
+	
 	
 	$(function(){
 		mobileMenuOutsideClick();
