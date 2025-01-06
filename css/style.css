@@ -1045,6 +1045,31 @@ form label {
   }
 }
 
+.radio-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio-container>div{
+    display: flex;
+    width: 12em;
+    justify-content: space-around;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.form-container>div{
+    padding: 1em;
+    width: 25em;
+    max-width: 25em;
+    min-width: 18em;
+}
+
 @media screen and (max-width: 380px) {
   .simply-countdown > .simply-section{
     width: 4em;
