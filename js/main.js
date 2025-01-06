@@ -231,7 +231,7 @@
 		console.log("confirmando",name,number);
 		var message= "Hola,";
 		var radioValue = $("input[name='confirm']:checked").val();
-            if(radioValue == "confirm"){
+            if(radioValue == "yes"){
 				message+="%20quiero%20confirmar%20mi%20asistencia%20para%20la%20boda%20de%20Dania%20y%20Eduardo%20para%20"+number+" personas. Mi nombre es "+name;
             }else{
 				message+="%20lamentablemente%20no%20podré%20asistir%20a%20la%20boda%20de%20Dania%20y%20Eduardo. Mi nombre es "+name;
