@@ -222,7 +222,7 @@
 	};
 
 
-	document.getElementById("confirmar").addEventListener("click", confirmar);
+	//document.getElementById("confirmar").addEventListener("click", confirmar);
 	function confirmar(){
 		var name = document.getElementById("name").value
 		var number = document.getElementById("numInv").innerHTML;
