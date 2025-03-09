@@ -8,7 +8,7 @@
 	console.log("se entro a la invitacion",params.number)
 		var number =(params.number == undefined )?0:params.number
 		var pases = (number == 1) ? " pase" : " pases";
-	//document.getElementById("numInv").innerHTML = "Esta invitación es valida por "+ number+ pases;
+	document.getElementById("numInv").innerHTML = "Esta invitación es valida por "+ number+ pases;
 
 	var mobileMenuOutsideClick = function() {
 
@@ -222,7 +222,7 @@
 	};
 
 
-	//document.getElementById("confirmar").addEventListener("click", confirmar);
+	document.getElementById("confirmar").addEventListener("click", confirmar);
 	function confirmar(){
 		var name = document.getElementById("name").value
 		var number = document.getElementById("numInv").innerHTML;
